@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">My Name</a>
+            <button id="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Menu</button>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="main-content">
+        <section id="hero" class="hero">
+            <div class="container">
+                <h1>Welcome to My Portfolio</h1>
+                <p>Your go-to place for my latest projects and skills.</p>
+                <a href="#projects" class="cta-button">View Projects</a>
+            </div>
+        </section>
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <h3>Project One</h3>
+                        <p>A brief description of the first project.</p>
+                        <a href="https://example.com/project1-demo" target="_blank">Demo</a>
+                        <a href="https://github.com/user/project1" target="_blank">GitHub</a>
+                    </article>
+                    <article class="project-card">
+                        <h3>Project Two</h3>
+                        <p>A brief description of the second project.</p>
+                        <a href="https://example.com/project2-demo" target="_blank">Demo</a>
+                        <a href="https://github.com/user/project2" target="_blank">GitHub</a>
+                    </article>
+                    <article class="project-card">
+                        <h3>Project Three</h3>
+                        <p>A brief description of the third project.</p>
+                        <a href="https://example.com/project3-demo" target="_blank">Demo</a>
+                        <a href="https://github.com/user/project3" target="_blank">GitHub</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>Git</li>
+                </ul>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <form id="contact-form" aria-live="polite">
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                    <div id="error-message" class="error-message"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 My Name. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
