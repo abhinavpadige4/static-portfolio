@@ -1,0 +1,94 @@
+/* Design Tokens */
+:root {
+  --color-bg: #0f172a;
+  --color-surface: #1e293b;
+  --color-text: #e2e8f0;
+  --color-muted: #94a3b8;
+  --color-accent: #38bdf8;
+  --color-accent-hover: #0ea5e9;
+  --font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --radius: 8px;
+  --spacing-0: 0;
+  --spacing-1: 0.25rem; /* 4px */
+  --spacing-2: 0.5rem;  /* 8px */
+  --spacing-3: 0.75rem; /* 12px */
+  --spacing-4: 1rem;    /* 16px */
+  --spacing-5: 1.25rem; /* 20px */
+  --spacing-6: 1.5rem;  /* 24px */
+  --max-width: 1100px;
+}
+
+/* Base Reset */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-family: var(--font-family); line-height: 1.5; color: var(--color-text); background: var(--color-bg); scroll-behavior: smooth; }
+body { min-height: 100vh; display: flex; flex-direction: column; }
+img, picture, svg, video { max-width: 100%; display: block; }
+button { cursor: pointer; border: none; background: none; }
+
+/* Utility */
+.container { max-width: var(--max-width); margin-inline: auto; padding-inline: var(--spacing-4); }
+
+/* Skip Link */
+.skip-link { position: absolute; top: -100%; left: 0; background: var(--color-surface); color: var(--color-text); padding: var(--spacing-2) var(--spacing-3); z-index: 100; }
+.skip-link:focus { top: 0; }
+
+/* Header & Nav */
+.header { position: sticky; top: 0; background: var(--color-surface); z-index: 10; }
+.nav { display: flex; align-items: center; justify-content: space-between; padding: var(--spacing-3) var(--spacing-4); }
+.nav-toggle { display: none; }
+.nav-list { display: flex; gap: var(--spacing-4); list-style: none; }
+.nav-link { color: var(--color-text); text-decoration: none; padding: var(--spacing-2); border-radius: var(--radius); }
+.nav-link:hover, .nav-link:focus-visible { background: var(--color-accent); color: var(--color-bg); }
+
+/* Hero */
+.hero { padding: calc(4 * var(--spacing-6)) 0; text-align: center; background: linear-gradient(135deg, var(--color-surface), var(--color-bg)); }
+.hero-title { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: var(--spacing-4); }
+.hero-subtitle { font-size: clamp(1rem, 3vw, 1.5rem); margin-bottom: var(--spacing-5); color: var(--color-muted); }
+.btn { display: inline-block; padding: var(--spacing-3) var(--spacing-5); background: var(--color-accent); color: var(--color-bg); border-radius: var(--radius); text-decoration: none; font-weight: 600; }
+.btn:hover, .btn:focus-visible { background: var(--color-accent-hover); }
+
+/* Sections */
+.section { padding: var(--spacing-6) 0; }
+.section-title { font-size: clamp(1.5rem, 4vw, 2rem); margin-bottom: var(--spacing-5); text-align: center; }
+
+/* Projects */
+.project-grid { display: grid; gap: var(--spacing-5); list-style: none; }
+.project-card { background: var(--color-surface); padding: var(--spacing-4); border-radius: var(--radius); display: flex; flex-direction: column; height: 100%; }
+.project-title { font-size: 1.25rem; margin-bottom: var(--spacing-2); }
+.project-desc { flex-grow: 1; margin-bottom: var(--spacing-3); color: var(--color-muted); }
+.project-link { margin-top: auto; color: var(--color-accent); text-decoration: underline; }
+.project-link:hover, .project-link:focus-visible { color: var(--color-accent-hover); }
+
+/* Skills */
+.skill-list { display: flex; flex-wrap: wrap; gap: var(--spacing-2); justify-content: center; list-style: none; }
+.skill-item { background: var(--color-surface); padding: var(--spacing-2) var(--spacing-3); border-radius: var(--radius); color: var(--color-muted); }
+
+/* Contact */
+.contact-form { max-width: 600px; margin-inline: auto; display: grid; gap: var(--spacing-4); }
+.form-group { display: flex; flex-direction: column; }
+.form-group label { margin-bottom: var(--spacing-1); }
+.form-group input,
+.form-group textarea { padding: var(--spacing-2); border: 1px solid var(--color-muted); border-radius: var(--radius); background: var(--color-bg); color: var(--color-text); }
+.form-group input:focus,
+.form-group textarea:focus { outline: 2px solid var(--color-accent); }
+
+/* ---- Added Component Classes ---- */
+
+/* Background helper – applies the main background color */
+.bg { background: var(--color-bg); }
+
+/* Main content wrapper – provides vertical spacing and centers content */
+.main { padding: var(--spacing-6) var(--spacing-4); max-width: var(--max-width); margin-inline: auto; }
+
+/* Projects section – adds top margin and ensures consistent spacing */
+.projects { margin-top: var(--spacing-8, calc(2 * var(--spacing-6))); }
+
+/* Skills section – similar vertical spacing to other sections */
+.skills { margin-top: var(--spacing-8, calc(2 * var(--spacing-6))); }
+
+/* Contact section – adds vertical padding and centers the form */
+.contact { padding: var(--spacing-6) 0; display: flex; flex-direction: column; align-items: center; }
+
+/* Call‑to‑Action button – slightly larger than .btn and uses accent colors */
+.cta { display: inline-block; padding: var(--spacing-4) var(--spacing-6); background: var(--color-accent); color: var(--color-bg); border-radius: var(--radius); font-weight: 700; text-decoration: none; transition: background 0.2s ease; }
+.cta:hover, .cta:focus-visible { background: var(--color-accent-hover); }
