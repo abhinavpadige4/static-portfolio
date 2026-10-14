@@ -3,111 +3,105 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>John Doe – Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Teju Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/script.js"></script>
 </head>
-<body class="bg">
-  <!-- Skip to content -->
-  <a href="#main" class="skip-link">Skip to content</a>
-
-  <header class="header" id="site-header">
-    <nav class="nav" id="site-nav" aria-label="Primary navigation">
-      <button class="nav-toggle" aria-controls="nav-list" aria-expanded="false" aria-label="Toggle menu">
-        <svg width="24" height="24" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#" class="logo">Teju</a>
+      <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       </button>
-      <ul class="nav-list" id="nav-list">
+      <ul class="nav-menu" id="nav-menu">
         <li><a href="#hero" class="nav-link">Home</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main id="main" class="main">
-    <!-- Hero Section -->
-    <section id="hero" class="section hero" aria-label="Hero">
-      <div class="container">
-        <h1 class="hero-title">John Doe</h1>
-        <p class="hero-subtitle">Full‑Stack Developer & Designer</p>
-        <a href="#projects" class="btn cta">View My Work</a>
+  <main>
+    <section id="hero" class="hero section">
+      <div class="container hero-content">
+        <h1 class="hero-title">Hi, I’m Teju</h1>
+        <p class="hero-subtitle">Front‑End Engineer & UI Designer</p>
+        <a href="#contact" class="btn cta-btn">Get in Touch</a>
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section projects" aria-label="Projects">
+    <section id="about" class="about section">
       <div class="container">
-        <h2 class="section-title">Projects</h2>
-        <ul class="project-grid">
-          <li class="project-card">
-            <h3 class="project-title">Portfolio Site</h3>
-            <p class="project-desc">A responsive, accessible portfolio built with vanilla HTML, CSS and JavaScript.</p>
-            <a href="https://example.com/portfolio" class="project-link" target="_blank" rel="noopener">Live Demo</a>
-          </li>
-          <li class="project-card">
-            <h3 class="project-title">Task Tracker</h3>
-            <p class="project-desc">A simple task manager with local storage persistence.</p>
-            <a href="https://example.com/task-tracker" class="project-link" target="_blank" rel="noopener">Live Demo</a>
-          </li>
-          <li class="project-card">
-            <h3 class="project-title">Weather Widget</h3>
-            <p class="project-desc">A lightweight widget that shows current weather using a public API.</p>
-            <a href="https://example.com/weather" class="project-link" target="_blank" rel="noopener">Live Demo</a>
-          </li>
-        </ul>
+        <h2 class="section-title">About Me</h2>
+        <p class="section-text">I build responsive, accessible web experiences with a focus on performance and clean code. When I’m not coding, I enjoy sketching UI concepts and exploring new design trends.</p>
       </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section skills" aria-label="Skills">
+    <section id="skills" class="skills section">
       <div class="container">
         <h2 class="section-title">Skills</h2>
         <ul class="skill-list">
-          <li class="skill-item">HTML5</li>
-          <li class="skill-item">CSS3</li>
+          <li class="skill-item">HTML5 &amp; Semantic Markup</li>
+          <li class="skill-item">CSS3, Flexbox, Grid</li>
+          <li class="skill-item">Tailwind‑like Utility Classes</li>
           <li class="skill-item">JavaScript (ES6+)</li>
           <li class="skill-item">Responsive Design</li>
-          <li class="skill-item">Accessibility</li>
-          <li class="skill-item">Git & GitHub</li>
+          <li class="skill-item">Accessibility (a11y)</li>
         </ul>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact" aria-label="Contact">
+    <section id="projects" class="projects section">
       <div class="container">
-        <h2 class="section-title">Contact Me</h2>
-        <form id="contact-form" class="contact-form" novalidate>
+        <h2 class="section-title">Projects</h2>
+        <div class="project-grid">
+          <article class="project-card">
+            <h3 class="project-title">Portfolio Site</h3>
+            <p class="project-desc">A static, SEO‑friendly portfolio built with vanilla HTML, CSS and JS.</p>
+          </article>
+          <article class="project-card">
+            <h3 class="project-title">Todo App</h3>
+            <p class="project-desc">A progressive web app with offline support and local storage.</p>
+          </article>
+          <article class="project-card">
+            <h3 class="project-title">Weather Dashboard</h3>
+            <p class="project-desc">Real‑time weather data visualisation using a public API.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-text">Feel free to reach out via email or the form below.</p>
+        <a href="mailto:teju@example.com" class="email-link">teju@example.com</a>
+        <form class="contact-form" id="contact-form" novalidate>
           <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required />
-            <span class="error" aria-live="polite"></span>
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" name="name" class="form-input" required />
           </div>
           <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
-            <span class="error" aria-live="polite"></span>
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" class="form-input" required />
           </div>
           <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-            <span class="error" aria-live="polite"></span>
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" name="message" class="form-input" rows="4" required></textarea>
           </div>
-          <button type="submit" class="btn submit">Send Message</button>
+          <button type="submit" class="btn submit-btn">Send Message</button>
         </form>
-        <p class="fallback">
-          Or email me directly: <a href="mailto:you@example.com">you@example.com</a>
-        </p>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 John Doe. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p class="footer-text">© 2026 Teju. All rights reserved.</p>
     </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
