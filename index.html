@@ -3,104 +3,127 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Teju Portfolio</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <script defer src="js/script.js"></script>
+  <title>Akash Portfolio</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <script src="js/main.js" defer></script>
 </head>
 <body>
   <header class="site-header">
-    <nav class="nav container" aria-label="Main navigation">
-      <a href="#" class="logo">Teju</a>
-      <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-      </button>
-      <ul class="nav-menu" id="nav-menu">
-        <li><a href="#hero" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="container header-inner">
+      <div class="logo">Akash</div>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span class="hamburger"></span>
+        </button>
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section id="hero" class="hero section">
-      <div class="container hero-content">
-        <h1 class="hero-title">Hi, I’m Teju</h1>
-        <p class="hero-subtitle">Front‑End Engineer & UI Designer</p>
-        <a href="#contact" class="btn cta-btn">Get in Touch</a>
+    <!-- Hero Section -->
+    <section id="hero" class="section hero reveal">
+      <div class="container hero-inner">
+        <h1 class="hero-title">Hi, I’m Akash.</h1>
+        <p class="hero-subtitle">Full‑stack developer crafting beautiful, performant web experiences.</p>
+        <a href="#contact" class="btn btn-primary">Get in Touch</a>
       </div>
     </section>
 
-    <section id="about" class="about section">
-      <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <p class="section-text">I build responsive, accessible web experiences with a focus on performance and clean code. When I’m not coding, I enjoy sketching UI concepts and exploring new design trends.</p>
-      </div>
-    </section>
-
-    <section id="skills" class="skills section">
-      <div class="container">
-        <h2 class="section-title">Skills</h2>
-        <ul class="skill-list">
-          <li class="skill-item">HTML5 &amp; Semantic Markup</li>
-          <li class="skill-item">CSS3, Flexbox, Grid</li>
-          <li class="skill-item">Tailwind‑like Utility Classes</li>
-          <li class="skill-item">JavaScript (ES6+)</li>
-          <li class="skill-item">Responsive Design</li>
-          <li class="skill-item">Accessibility (a11y)</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="projects" class="projects section">
-      <div class="container">
-        <h2 class="section-title">Projects</h2>
-        <div class="project-grid">
-          <article class="project-card">
-            <h3 class="project-title">Portfolio Site</h3>
-            <p class="project-desc">A static, SEO‑friendly portfolio built with vanilla HTML, CSS and JS.</p>
-          </article>
-          <article class="project-card">
-            <h3 class="project-title">Todo App</h3>
-            <p class="project-desc">A progressive web app with offline support and local storage.</p>
-          </article>
-          <article class="project-card">
-            <h3 class="project-title">Weather Dashboard</h3>
-            <p class="project-desc">Real‑time weather data visualisation using a public API.</p>
-          </article>
+    <!-- About Section -->
+    <section id="about" class="section about reveal">
+      <div class="container about-inner">
+        <div class="avatar"></div>
+        <div class="about-content">
+          <h2 class="section-title">About Me</h2>
+          <p class="about-text">Passionate about turning ideas into reality with clean code and thoughtful design. I love exploring new technologies, solving problems, and collaborating with diverse teams.</p>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="contact section">
+    <!-- Skills Section -->
+    <section id="skills" class="section skills reveal">
       <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <p class="section-text">Feel free to reach out via email or the form below.</p>
-        <a href="mailto:teju@example.com" class="email-link">teju@example.com</a>
-        <form class="contact-form" id="contact-form" novalidate>
+        <h2 class="section-title">Skills</h2>
+        <div class="grid skill-grid">
+          <div class="card skill-card">JavaScript</div>
+          <div class="card skill-card">HTML &amp; CSS</div>
+          <div class="card skill-card">React</div>
+          <div class="card skill-card">Node.js</div>
+          <div class="card skill-card">Python</div>
+          <div class="card skill-card">Git &amp; CI/CD</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects reveal">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="grid project-grid">
+          <div class="card project-card">
+            <div class="project-image"></div>
+            <h3 class="project-title">Portfolio Website</h3>
+            <p class="project-desc">A responsive, animated personal portfolio built with vanilla HTML, CSS and JS.</p>
+            <div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
+          </div>
+          <div class="card project-card">
+            <div class="project-image"></div>
+            <h3 class="project-title">Task Manager API</h3>
+            <p class="project-desc">RESTful API for managing tasks, built with Node.js and Express.</p>
+            <div class="project-tags"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MongoDB</span></div>
+          </div>
+          <div class="card project-card">
+            <div class="project-image"></div>
+            <h3 class="project-title">Chat App</h3>
+            <p class="project-desc">Real‑time chat application using WebSockets.</p>
+            <div class="project-tags"><span class="tag">Socket.io</span><span class="tag">React</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact reveal">
+      <div class="container contact-inner">
+        <h2 class="section-title">Contact Me</h2>
+        <form class="contact-form" novalidate>
           <div class="form-group">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" id="name" name="name" class="form-input" required />
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
           </div>
           <div class="form-group">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" id="email" name="email" class="form-input" required />
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
           </div>
           <div class="form-group">
-            <label for="message" class="form-label">Message</label>
-            <textarea id="message" name="message" class="form-input" rows="4" required></textarea>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
           </div>
-          <button type="submit" class="btn submit-btn">Send Message</button>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p class="form-status" aria-live="polite"></p>
         </form>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Twitter">&#x1F426;</a>
+          <a href="#" class="social-link" aria-label="LinkedIn">&#x1F4BB;</a>
+          <a href="#" class="social-link" aria-label="GitHub">&#x1F5C3;</a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-content">
-      <p class="footer-text">© 2026 Teju. All rights reserved.</p>
+    <div class="container footer-inner">
+      <p>&copy; 2026 Akash. All rights reserved.</p>
     </div>
   </footer>
 </body>
